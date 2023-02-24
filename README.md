@@ -9,6 +9,48 @@ yum update -y
 yum install git python python-devel python-pip openssl ansible -y
 ansible --version
 ```
+# SonarQube Download & Installation
+```bash
+cd /opt
+wget https://binaries.sonarsource.com/Distribution/sonarqube/sonarqube-8.9.10.61524.zip
+unzip sonarqube-8.9.10.61524.zip
+mv sonarqube-8.9.10.61524 sonarqube
+useradd chaitu
+passwd chaitu
+chown -R chaitu:chaitu sonarqube
+cd /opt/sonarqube/bin/linux-x86-64
+vi sonar.sh 
+--------------
+edit this
+#RUN_AS_USER=
+RUN_AS_USER=chaitu
+su - chaitu
+[And start SonarQube]
+cd /opt/sonarqube/bin/linux-x86-64
+sh sonar.sh start
+sh sonar.sh status
+ip:9000
+```
+# Nexus Download & Installation
+```bash
+yum install java-1.8* -y
+cd /opt
+wget https://download.sonatype.com/nexus/3/nexus-3.47.1-01-unix.tar.gz
+tar -xvzf  nexus-3.47.1-01-unix.tar.gz
+mv nexus-3.47.1-01 nexus
+useradd chaitu
+passwd chaitu
+chown -R chaitu:chaitu nexus
+chown -R chaitu:chaitu sonatype-work
+cd /opt/nexus/bin
+vi nexus.rc
+--------edit---------
+#run_as_user="chaitu"
+----------edit--------
+sh nexus start
+sh nexus status
+ip:8081
+```
 # Ansible-Node Configuration
 ```bash
 cd /etc/ansible
@@ -29,3 +71,5 @@ sudo vi hosts
 ![lastcopy](https://user-images.githubusercontent.com/111736742/221110044-71a13ad0-a240-4bf8-9d97-cc01c4fccec2.png)
 ## Docker-swarm configuration
 ![last1swarm](https://user-images.githubusercontent.com/111736742/221110130-c6408ae3-1ac7-438e-94d1-2ce747b4eb8a.png)
+# Jenkins integration with ansible-master Server.
+#Goto Manage Jenkins---->Configure System---->SSH Servers
