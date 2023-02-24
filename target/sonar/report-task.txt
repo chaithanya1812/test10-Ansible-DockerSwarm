@@ -1,0 +1,6 @@
+projectKey=in.chaitu.com:movie-app
+serverUrl=http://3.110.147.19:9000
+serverVersion=8.9.10.61524
+dashboardUrl=http://3.110.147.19:9000/dashboard?id=in.chaitu.com%3Amovie-app
+ceTaskId=AYaBzOijxAVVxnTRYAs_
+ceTaskUrl=http://3.110.147.19:9000/api/ce/task?id=AYaBzOijxAVVxnTRYAs_
