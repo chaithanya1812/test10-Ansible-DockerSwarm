@@ -73,3 +73,29 @@ sudo vi hosts
 ![last1swarm](https://user-images.githubusercontent.com/111736742/221110130-c6408ae3-1ac7-438e-94d1-2ce747b4eb8a.png)
 # Jenkins integration with ansible-master Server.
 #Goto Manage Jenkins---->Configure System---->SSH Servers
+![lastansbileconfiguration](https://user-images.githubusercontent.com/111736742/221119983-bd1fa56e-4a79-4e8e-bdc7-54b3cd3a0043.png)
+## Jenkins-Dashboard Before changes
+![lastjenkinsdashboard](https://user-images.githubusercontent.com/111736742/221120332-caea9273-f028-423c-9058-2ddcddb31612.png)
+#SonarQube
+![last sonar-qube](https://user-images.githubusercontent.com/111736742/221120416-f81ef0c3-defc-40ea-8246-bc7270835e50.png)
+#Nexus- to storage artifacts
+![last-nexus](https://user-images.githubusercontent.com/111736742/221120626-3ef55ee1-2aaf-4b47-bfd8-1e7b1f0790e7.png)
+#Docker-Hub Image
+![lastdockerhubimage](https://user-images.githubusercontent.com/111736742/221121441-86681632-0712-4578-bb96-da3971906074.png)
+#war file copied to anisble master
+![lastwarfile](https://user-images.githubusercontent.com/111736742/221121603-fc159d4b-6588-466d-ad95-bde38be0e47a.png)
+#Tomcat Output
+![lasttomcat](https://user-images.githubusercontent.com/111736742/221121776-c445136b-3576-4846-868d-92b0ca6e5b91.png)
+#Docker-swarm-output
+![lastdockeroutput](https://user-images.githubusercontent.com/111736742/221121918-392b42c0-5fac-4f1e-b6cc-0ca76b967710.png)
+## ----------------------------------------------------
+## --------------------------------------------------
+## After Changes
+#Tomcat Output
+![lasteaftertomactchanges](https://user-images.githubusercontent.com/111736742/221122221-0e54c181-f2e3-4b68-9d83-1e2bbfeed118.png)
+#Docker-Swarm
+![lasterafterchangestomcat](https://user-images.githubusercontent.com/111736742/221122324-24daf277-17cd-4b2d-b6a8-bcda0e223146.png)
+
+
+
+
