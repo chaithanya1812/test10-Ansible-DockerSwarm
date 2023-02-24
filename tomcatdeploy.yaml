@@ -1,1 +1,35 @@
+---
+- hosts: TomcatServers
+  become: true
+  tasks:
+   - yum:
+      name: java
+      state: installed
+   - get_url:
+        url: https://dlcdn.apache.org/tomcat/tomcat-9/v9.0.71/bin/apache-tomcat-9.0.71.tar.gz
+        dest: /opt/
+   - unarchive:
+       src: /opt/apache-tomcat-9.0.71.tar.gz
+       dest: /opt/
+       remote_src: yes
+   - file:
+       path: /opt/apache-tomcat-9.0.71
+       state: directory
+       recurse: yes
+       owner: ansible
+       group: ansible
+   - copy:
+       src: context.xml
+       dest: /opt/apache-tomcat-9.0.71/webapps/manager/META-INF/context.xml
+   - copy:
+      src: tomcat-users.xml
+      dest: /opt/apache-tomcat-9.0.71/conf/tomcat-users.xml
+   - copy:
+       src: movie-app.war
+       dest: /opt/apache-tomcat-9.0.71/webapps
+   - shell: nohup sh startup.sh
+     args:
+         chdir: /opt/apache-tomcat-9.0.71/bin
+
+...
 
